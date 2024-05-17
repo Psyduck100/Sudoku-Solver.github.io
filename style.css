@@ -72,7 +72,7 @@ input[type="text"]:active {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Add inset box shadow to simulate depression */
 }
 
-#solve-btn {
+#solve-btn, #clear-btn {
   align-self: center;
   justify-self: center;
   margin: min(2%, 10px);
@@ -80,15 +80,27 @@ input[type="text"]:active {
 
 .flip-container {
   perspective: 500px;
+  transition: 1s;
 }
+
+
+
 /* flip the pane when hovered */
 .flip-container.flipped .flipper {
   transform: rotateX(180deg);
+  transition: 1s;
 }
+
+.flip-container.no-anim-flipped .flipper {
+  transform: rotateX(180deg);
+  transition: 0s;
+}
+
+
 
 /* flip speed goes here */
 .flipper {
-  transition: 1s;
+  transition: inherit;
   transform-style: preserve-3d;
 
   position: relative;
@@ -104,6 +116,7 @@ input[type="text"]:active {
   left: 0;
 }
 
+
 /* front pane, placed above back */
 .front {
   z-index: 2;
@@ -114,4 +127,39 @@ input[type="text"]:active {
 /* back, initially hidden pane */
 .back {
   transform: rotateX(180deg);
+}
+
+
+/* button flip */
+
+.flip-container-btn {
+  perspective: 1000px;
+  height: inherit;
+}
+
+.flip-container-btn.flipped .flipper-btn {
+  transform: rotateX(180deg);
+}
+
+.flipper-btn {
+  transition: 1s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flipper-btn .front, .flipper-btn .back{
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.solve-clear-btn{
+  height: 100px;
 }

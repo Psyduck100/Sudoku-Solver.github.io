@@ -81,7 +81,11 @@ function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
         sudokuGridElement.rows[i].cells[j].querySelector(".back input"),
         delay_timer
       );
-      delay_timer += 50;
+      delay_timer += 5;
+    }
+    else{
+      sudokuGridElement.rows[i].cells[j].querySelector(".back input").value = grid[i][j];
+      sudokuGridElement.rows[i].cells[j].querySelector(".flip-container").classList.toggle("no-anim-flipped");
     }
   }
 }
@@ -196,8 +200,15 @@ function solveSudoku(unsolved_grid) {
   return false;
 }
 
+
+// flips submit btn
+
+function flipbtn(){
+  const flipperEl = document.querySelector(".flip-container-btn");
+  flipperEl.classList.toggle("flipped");
+}
+//complete function for displaying sudoku results
 function displaySudokuResults() {
-  console.log("hello");
   const sudokuGrid = fetchSudokuArray(document.getElementById("sudoku-table"));
 
   if (is_valid_sudoku(sudokuGrid)) {
@@ -205,18 +216,42 @@ function displaySudokuResults() {
     uploadSudokuArray(
       document.getElementById("sudoku-table"),
       sudokuGrid,
-      generateSpiralCoordinates(9, 9)
+      generateSpiralCoordinates(9, 9).reverse()
     );
   } else {
     console.log("unvalid grid!");
   }
+  
+  flipbtn();
+}
 
-  for (let i = 0; i < sudokuGrid.length; i++) {
-    //print matrix
-    console.log(sudokuGrid[i].join(" "));
+
+
+//comlete function for clearing the sudoku board
+function clearSudokuResults(){
+  const gridEl = document.getElementById("sudoku-table");
+  for (let i = 0; i < 9; i++){
+    for (let j = 0; j < 9; j++){
+      const flipEl = gridEl.rows[i].cells[j].querySelector(".flip-container");
+      if (flipEl.classList.contains("no-anim-flipped")){
+        flipEl.querySelector(".flipper .front input").value = '';
+        flipEl.classList.toggle("no-anim-flipped");
+      }
+      else{
+        
+        flipEl.classList.toggle("flipped");
+        flipEl.querySelector(".flipper .front input").value = '';
+      }
   }
+
+  flipbtn()
+}
 }
 
 const solve_btn = document.getElementById("solve-btn");
 
 solve_btn.addEventListener("click", displaySudokuResults);
+
+const clear_btn = document.getElementById("clear-btn");
+
+clear_btn.addEventListener("click", clearSudokuResults);
