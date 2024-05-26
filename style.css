@@ -1,3 +1,5 @@
+@import url("style_text.css");
+
 body,
 html {
   height: 100%;
@@ -44,6 +46,7 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
 }
+
 td {
   display: table-cell; /* Use table-cell display */
   height: calc(100% / 9);
@@ -60,11 +63,12 @@ input[type="text"] {
   padding: 15%;
   text-align: center;
   background-clip: content-box; /* Clip the background to the content box */
-  background-size: contain;
+  background-size: cover;
   background-image: url(beveled\ wood.png);
   border-radius: 33%;
   color: rgba(105, 61, 3, 0.75);
   font-size: 75%;
+  font-weight: 550;
   outline-style: none;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.66); /* Adjust shadow color and size as needed */
 }
@@ -72,18 +76,11 @@ input[type="text"]:active {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Add inset box shadow to simulate depression */
 }
 
-#solve-btn, #clear-btn {
-  align-self: center;
-  justify-self: center;
-  margin: min(2%, 10px);
-}
 
 .flip-container {
   perspective: 500px;
   transition: 1s;
 }
-
-
 
 /* flip the pane when hovered */
 .flip-container.flipped .flipper {
@@ -95,8 +92,6 @@ input[type="text"]:active {
   transform: rotateX(180deg);
   transition: 0s;
 }
-
-
 
 /* flip speed goes here */
 .flipper {
@@ -116,7 +111,6 @@ input[type="text"]:active {
   left: 0;
 }
 
-
 /* front pane, placed above back */
 .front {
   z-index: 2;
@@ -128,8 +122,6 @@ input[type="text"]:active {
 .back {
   transform: rotateX(180deg);
 }
-
-
 /* button flip */
 
 .flip-container-btn {
@@ -158,8 +150,46 @@ input[type="text"]:active {
   align-items: center;
 }
 
-
-
 .solve-clear-btn{
   height: 100px;
 }
+
+#solve-btn, #clear-btn {
+  align-self: center;
+  justify-self: center;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.33);
+  border-width: 5px;
+  filter: brightness(1.25);
+  font-family: 'Times New Roman', Times, serif;
+  color: rgba(244, 183, 104, 0.75);
+  text-shadow: 
+  1px 1px 2px #000, /* Inner shadows for carved effect */
+  -1px -1px 2px #000, 
+  2px 2px 5px rgba(0, 0, 0, 0.5), /* Outer shadows for depth */
+  -2px -2px 5px rgba(0, 0, 0, 0.5);
+
+
+}
+
+#solve-btn {
+  background-image: url("wood-btn-front.jpg");
+  background-size: cover;
+}
+
+#clear-btn {
+  background-image: url("wood-btn-back.jpg");
+  background-size: cover;
+}
+
+#solve-btn:hover, #clear-btn:hover {
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
+.sudoku-button {
+  min-height: 50px;
+  min-width: 75px;
+}
+
+

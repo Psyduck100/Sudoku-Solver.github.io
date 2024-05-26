@@ -65,9 +65,13 @@ function flipElTextAnim(flipperElem, newVal, innerElem, delay = 0) {
   }, delay);
 }
 
-function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
-  let delay_timer = 0;
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+async function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
+  const base_delay = 250;
+  let delay_timer = 0;
   for (let k = 0; k < reveal_coordinates.length; k++) {
     let i = reveal_coordinates[k][0];
     let j = reveal_coordinates[k][1];
@@ -75,18 +79,24 @@ function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
       sudokuGridElement.rows[i].cells[j].querySelector("input").value !=
       grid[i][j]
     ) {
+      delay_timer = base_delay * Math.exp(-0.1 * k) + 10;
       flipElTextAnim(
         sudokuGridElement.rows[i].cells[j].querySelector(".flip-container"),
         grid[i][j],
         sudokuGridElement.rows[i].cells[j].querySelector(".back input"),
-        delay_timer
+        0
       );
-      delay_timer += 5;
+      
+      if (doc)
+      
     }
     else{
+      delay_timer = 0;
       sudokuGridElement.rows[i].cells[j].querySelector(".back input").value = grid[i][j];
       sudokuGridElement.rows[i].cells[j].querySelector(".flip-container").classList.toggle("no-anim-flipped");
     }
+
+    await sleep(delay_timer);
   }
 }
 
