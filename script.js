@@ -65,6 +65,30 @@ function flipElTextAnim(flipperElem, newVal, innerElem, delay = 0) {
   }, delay);
 }
 
+function toggleTitleAnim(cur_let_num, extended){
+  let query_path = `.text-letter.letter-${cur_let_num}`;
+  let cur_shadow_letter = document.querySelector(`${query_path} .shadow-letter-${cur_let_num}`);
+  let cur_clip_letter = document.querySelector(`${query_path} .clip-letter-${cur_let_num}`);
+
+  if (!extended && !cur_shadow_letter.classList.contains('pop-out')){
+
+        
+    cur_shadow_letter.classList.remove('pop-in');
+    cur_clip_letter.classList.remove('pop-in');
+    cur_shadow_letter.classList.add('pop-out');
+    cur_clip_letter.classList.add('pop-out');
+  }
+  else if (extended && cur_shadow_letter.classList.contains('pop-out')){
+    cur_shadow_letter.classList.remove('pop-out');
+    cur_clip_letter.classList.remove('pop-out');
+    cur_shadow_letter.classList.add('pop-in');
+    cur_clip_letter.classList.add('pop-in');
+  }
+  
+
+}
+
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -86,9 +110,9 @@ async function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
         sudokuGridElement.rows[i].cells[j].querySelector(".back input"),
         0
       );
-      
-      if (doc)
-      
+      let cur_let_num = Math.ceil((k + 1)/13.5);
+      toggleTitleAnim(cur_let_num, false);
+
     }
     else{
       delay_timer = 0;
@@ -256,6 +280,9 @@ function clearSudokuResults(){
 
   flipbtn()
 }
+  for (let k = 1; k < 7; k++){
+    toggleTitleAnim(k, true);
+  }
 }
 
 const solve_btn = document.getElementById("solve-btn");
