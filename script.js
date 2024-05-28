@@ -65,28 +65,21 @@ function flipElTextAnim(flipperElem, newVal, innerElem, delay = 0) {
   }, delay);
 }
 
-function toggleTitleAnim(cur_let_num, extended){
-  let query_path = `.text-letter.letter-${cur_let_num}`;
-  let cur_shadow_letter = document.querySelector(`${query_path} .shadow-letter-${cur_let_num}`);
-  let cur_clip_letter = document.querySelector(`${query_path} .clip-letter-${cur_let_num}`);
+// function toggleTitleAnim(cur_let_num, extended){
+//   if (!extended && !letter.classList.contains('popped-out')){
+//     cur_shadow_letter.style.animationPlayState = 'running';
+//     cur_clip_letter.style.animationPlayState = 'running';
+//     letter.classList.toggle('popped-out');
 
-  if (!extended && !cur_shadow_letter.classList.contains('pop-out')){
-
-        
-    cur_shadow_letter.classList.remove('pop-in');
-    cur_clip_letter.classList.remove('pop-in');
-    cur_shadow_letter.classList.add('pop-out');
-    cur_clip_letter.classList.add('pop-out');
-  }
-  else if (extended && cur_shadow_letter.classList.contains('pop-out')){
-    cur_shadow_letter.classList.remove('pop-out');
-    cur_clip_letter.classList.remove('pop-out');
-    cur_shadow_letter.classList.add('pop-in');
-    cur_clip_letter.classList.add('pop-in');
-  }
+//   }
+//   else if (extended && letter.classList.contains('popped-out')){
+//     cur_shadow_letter.style.animationPlayState = 'running';
+//     cur_clip_letter.style.animationPlayState = 'running';
+//     letter.classList.toggle('popped-out');
+//   }
   
 
-}
+// }
 
 
 function sleep(ms) {
@@ -94,6 +87,8 @@ function sleep(ms) {
 }
 
 async function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
+  const clear_button = document.getElementById("clear-btn")
+  clear_button.disabled = true;
   const base_delay = 250;
   let delay_timer = 0;
   for (let k = 0; k < reveal_coordinates.length; k++) {
@@ -110,8 +105,7 @@ async function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
         sudokuGridElement.rows[i].cells[j].querySelector(".back input"),
         0
       );
-      let cur_let_num = Math.ceil((k + 1)/13.5);
-      toggleTitleAnim(cur_let_num, false);
+
 
     }
     else{
@@ -120,8 +114,12 @@ async function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
       sudokuGridElement.rows[i].cells[j].querySelector(".flip-container").classList.toggle("no-anim-flipped");
     }
 
+    toggleTitleText(Math.ceil((k+1)/6.3), false);
+
     await sleep(delay_timer);
   }
+  clear_button.disabled = false;
+
 }
 
 //sudoku solving algo ------------------------------------------
@@ -257,15 +255,47 @@ function displaySudokuResults() {
   }
   
   flipbtn();
+
+
+
 }
 
 
+// toggles each letter given state and number if not already on
+function toggleTitleText(letter_num, state){//state = true means the letter is already extended
+  let query_path = `.text-letter.letter-${letter_num}`;
+  let cur_shadow_letter = document.querySelector(`${query_path} .shadow-letter-${letter_num}`);
+  let cur_clip_letter = document.querySelector(`${query_path} .clip-letter-${letter_num}`);
+  let letter = document.querySelector(query_path);
+
+  if (state && letter.classList.contains("extended")){// so if already extended want to retract it
+    cur_clip_letter.classList.remove("pop-out");
+    cur_shadow_letter.classList.remove("pop-out")
+    cur_clip_letter.classList.add("pop-in");
+    cur_shadow_letter.classList.add("pop-in");
+
+    letter.classList.remove("extended");
+    letter.classList.add("retracted");
+  }
+  else if (!state && letter.classList.contains("retracted")){//vice versa
+    cur_clip_letter.classList.remove("pop-in");
+    cur_shadow_letter.classList.remove("pop-in")
+    cur_clip_letter.classList.add("pop-out");
+    cur_shadow_letter.classList.add("pop-out")
+    letter.classList.add("extended");
+    letter.classList.remove("retracted");
+  }
+}
 
 //comlete function for clearing the sudoku board
 function clearSudokuResults(){
+  const solve_button = document.getElementById("solve-btn")
+  solve_button.disabled = true;
   const gridEl = document.getElementById("sudoku-table");
+  let num = 0;
   for (let i = 0; i < 9; i++){
     for (let j = 0; j < 9; j++){
+      num++
       const flipEl = gridEl.rows[i].cells[j].querySelector(".flip-container");
       if (flipEl.classList.contains("no-anim-flipped")){
         flipEl.querySelector(".flipper .front input").value = '';
@@ -276,13 +306,16 @@ function clearSudokuResults(){
         flipEl.classList.toggle("flipped");
         flipEl.querySelector(".flipper .front input").value = '';
       }
+      toggleTitleText(Math.ceil((num)/6.3), true);
   }
 
   flipbtn()
-}
-  for (let k = 1; k < 7; k++){
-    toggleTitleAnim(k, true);
-  }
+
+  solve_btn.disabled = false;
+  
+
+  } 
+
 }
 
 const solve_btn = document.getElementById("solve-btn");
@@ -292,3 +325,5 @@ solve_btn.addEventListener("click", displaySudokuResults);
 const clear_btn = document.getElementById("clear-btn");
 
 clear_btn.addEventListener("click", clearSudokuResults);
+
+

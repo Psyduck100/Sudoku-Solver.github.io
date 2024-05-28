@@ -6,16 +6,12 @@ html {
 }
 
 #game {
-  height: 100vw; /* Ensure the container fills the entire viewport height */
-  width: 100vw; /* Ensure the container fills the entire viewport width */
-  display: flex; /* Use flexbox for layout */
+  height: 40vw;
+  width: 40vw; /* Ensure the container fills the entire viewport width */
+  display: flexbox; /* Use flexbox for layout */
   flex-direction: column;
-  margin-top: min(10vh, 50px);
-}
-
-#h1 {
-  height: auto;
-  width: auto;
+  margin-top:0;
+  margin-left: 30vw;
 }
 
 #board {
@@ -26,13 +22,36 @@ html {
   padding: 1%;
   border-style: solid;
   border-radius: 5%;
-  height: 25%;
-  width: 25%;
+  height: 80%;
+  width: 80%;
+  margin-left: 5%;
   min-width: 200px;
   min-height: 200px;
-  margin-left: 25%;
+  display: inline-block;
+
 }
 
+.solve-clear-btn{
+  height: 10%;
+  width: 10%;
+  display: inline-block;
+}
+
+.title-text {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'bungee', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(5vw + 2rem);
+  text-align: center;
+  margin: 0;
+
+
+} 
 .flip-container,
 .flipper,
 .front,
@@ -150,9 +169,7 @@ input[type="text"]:active {
   align-items: center;
 }
 
-.solve-clear-btn{
-  height: 100px;
-}
+
 
 #solve-btn, #clear-btn {
   align-self: center;
@@ -193,3 +210,7 @@ input[type="text"]:active {
 }
 
 
+#title-btn{
+  z-index: 3;
+  color: blue;
+}
