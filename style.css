@@ -1,17 +1,12 @@
 @import url("style_text.css");
 
-body,
-html {
-  height: 100%;
-}
 
 #game {
-  height: 40vw;
-  width: 40vw; /* Ensure the container fills the entire viewport width */
   display: flexbox; /* Use flexbox for layout */
   flex-direction: column;
   margin-top:0;
-  margin-left: 30vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 #board {
@@ -22,9 +17,9 @@ html {
   padding: 1%;
   border-style: solid;
   border-radius: 5%;
-  height: 80%;
-  width: 80%;
-  margin-left: 5%;
+  width: 32%;
+  aspect-ratio: 1;
+  margin-left: 25%;
   min-width: 200px;
   min-height: 200px;
   display: inline-block;
@@ -32,9 +27,12 @@ html {
 }
 
 .solve-clear-btn{
-  height: 10%;
-  width: 10%;
   display: inline-block;
+  width: clamp(100px, 15%, 225px);
+  aspect-ratio: 1.5;
+  margin-left: 10%;
+  position: relative;
+  bottom: 30vh;
 }
 
 .title-text {
@@ -55,8 +53,11 @@ html {
 .flip-container,
 .flipper,
 .front,
-.back {
+.back,
+.front-btn,
+.back-btn {
   height: 100%;
+  width: 100%;
 }
 
 table {
@@ -81,8 +82,8 @@ input[type="text"] {
   box-sizing: border-box; /* Include padding and border in width */
   padding: 15%;
   text-align: center;
-  background-clip: content-box; /* Clip the background to the content box */
-  background-size: cover;
+  background-clip: content-box;
+  background-size: 100%;
   background-image: url(beveled\ wood.png);
   border-radius: 33%;
   color: rgba(105, 61, 3, 0.75);
@@ -121,52 +122,60 @@ input[type="text"]:active {
 }
 
 /* hide back of pane during swap */
-.front,
+.front, .front-btn, .back-btn,
 .back {
   backface-visibility: hidden;
-
   position: absolute;
   top: 0;
   left: 0;
 }
 
 /* front pane, placed above back */
-.front {
+.front, .front-btn {
   z-index: 2;
   /* for firefox 31 */
   transform: rotateX(0deg);
 }
 
 /* back, initially hidden pane */
-.back {
+.back, .back-btn {
   transform: rotateX(180deg);
 }
 /* button flip */
 
 .flip-container-btn {
   perspective: 1000px;
-  height: inherit;
+  height: 100%;
+  width: 100%;
+  display: inherit;
 }
 
 .flip-container-btn.flipped .flipper-btn {
   transform: rotateX(180deg);
+  height: 100%;
+  width: 100%;
+  display: inherit;
 }
 
 .flipper-btn {
   transition: 1s;
   transform-style: preserve-3d;
-  width: 100%;
-  height: 100%;
+
   position: relative;
+  height: 100%;
+  width: 100%;
+  display: inherit;
 }
 
-.flipper-btn .front, .flipper-btn .back{
+.flipper-btn .front-btn, .flipper-btn .back-btn{
   backface-visibility: hidden;
-  width: 100%;
-  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  display: inherit;
 }
 
 
@@ -185,7 +194,10 @@ input[type="text"]:active {
   -1px -1px 2px #000, 
   2px 2px 5px rgba(0, 0, 0, 0.5), /* Outer shadows for depth */
   -2px -2px 5px rgba(0, 0, 0, 0.5);
-
+  width: 100%;
+  height: 100%;
+  font-size: 2.5vw;
+  display: inherit;
 
 }
 
@@ -207,8 +219,16 @@ input[type="text"]:active {
 .sudoku-button {
   min-height: 50px;
   min-width: 75px;
+  width: 100%;
+  height: 100%;
+
 }
 
+#solve, #clear {
+  width: 100%;
+  height: 100%;
+  display: inherit;
+}
 
 #title-btn{
   z-index: 3;
