@@ -239,27 +239,6 @@ function flipbtn(){
   const flipperEl = document.querySelector(".flip-container-btn");
   flipperEl.classList.toggle("flipped");
 }
-//complete function for displaying sudoku results
-function displaySudokuResults() {
-  const sudokuGrid = fetchSudokuArray(document.getElementById("sudoku-table"));
-
-  if (is_valid_sudoku(sudokuGrid)) {
-    solveSudoku(sudokuGrid);
-    uploadSudokuArray(
-      document.getElementById("sudoku-table"),
-      sudokuGrid,
-      generateSpiralCoordinates(9, 9).reverse()
-    );
-  } else {
-    console.log("unvalid grid!");
-  }
-  
-  flipbtn();
-
-
-
-}
-
 
 // toggles each letter given state and number if not already on
 function toggleTitleText(letter_num, state){//state = true means the letter is already extended
@@ -287,8 +266,51 @@ function toggleTitleText(letter_num, state){//state = true means the letter is a
   }
 }
 
+function changeTranslatePercent() {
+  let font_height = document.querySelector('.title-text');
+  
+  // Get the height of the test element
+  let height = parseFloat(getComputedStyle(font_height).height);
+  
+  // Calculate the percentage of the height
+  let percentage = height * 0.05; // 20% example
+  
+  // Update the CSS custom property value to the calculated percentage
+  document.documentElement.style.setProperty('--max-translate-percent', `${percentage}px`);
+  
+
+}
+//complete function for displaying sudoku results
+function displaySudokuResults() {
+  changeTranslatePercent();
+
+  const sudokuGrid = fetchSudokuArray(document.getElementById("sudoku-table"));
+
+  if (is_valid_sudoku(sudokuGrid)) {
+    solveSudoku(sudokuGrid);
+    uploadSudokuArray(
+      document.getElementById("sudoku-table"),
+      sudokuGrid,
+      generateSpiralCoordinates(9, 9).reverse()
+    );
+  } else {
+    console.log("unvalid grid!");
+  }
+  
+  flipbtn();
+
+
+
+}
+
+
+
+
 //comlete function for clearing the sudoku board
 function clearSudokuResults(){
+
+  changeTranslatePercent();
+
   const solve_button = document.getElementById("solve-btn")
   solve_button.disabled = true;
   const gridEl = document.getElementById("sudoku-table");
@@ -317,6 +339,7 @@ function clearSudokuResults(){
   } 
 
 }
+
 
 const solve_btn = document.getElementById("solve-btn");
 

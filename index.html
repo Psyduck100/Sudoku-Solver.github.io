@@ -8,1505 +8,1516 @@
   </head>
 
   <body>
+
+    <div id="game-background"> </div>
+
     <div id="game">
 
-      
-      <div class="title-text">
-        <div class="text-letter retracted letter-1"> S
-          <span class="text-clipped clip-letter-1">S</span>
-          <span class="text_shadows shadow-letter-1">S</span>
+
+        
+        <div class="title-text">
+          <div class="title-text-bg"></div>
+          <!-- <img src="bg1.jpg" class="title-bg" alt="wooden background of title"> -->
+
+          <div class="text-letter retracted letter-1"> S
+            <span class="text-clipped clip-letter-1">S</span>
+            <span class="text_shadows shadow-letter-1">S</span>
+          </div>
+
+          <div class="text-letter retracted letter-2"> u
+            <span class="text-clipped clip-letter-2">u</span>
+            <span class="text_shadows shadow-letter-2">u</span>
+          </div>
+
+          <div class="text-letter retracted letter-3"> d
+            <span class="text-clipped clip-letter-3">d</span>
+            <span class="text_shadows shadow-letter-3">d</span>
+          </div>
+
+          <div class="text-letter retracted letter-4"> o
+            <span class="text-clipped clip-letter-4">o</span>
+            <span class="text_shadows shadow-letter-4">o</span>
+          </div>
+
+          <div class="text-letter retracted letter-5"> k
+            <span class="text-clipped clip-letter-5">k</span>
+            <span class="text_shadows shadow-letter-5">k</span>
+          </div>
+
+          <div class="text-letter retracted letter-6"> u
+            <span class="text-clipped clip-letter-6">u</span>
+            <span class="text_shadows shadow-letter-6">u</span>
+          </div>
+
+          <div class="text-letter retracted letter-7"> S
+            <span class="text-clipped clip-letter-7">S</span>
+            <span class="text_shadows shadow-letter-7">S</span>
+          </div>
+
+          <div class="text-letter retracted letter-8"> o
+            <span class="text-clipped clip-letter-8">o</span>
+            <span class="text_shadows shadow-letter-8">o</span>
+          </div>
+
+          <div class="text-letter retracted letter-9"> l
+            <span class="text-clipped clip-letter-9">l</span>
+            <span class="text_shadows shadow-letter-9">l</span>
+          </div>
+
+          <div class="text-letter retracted letter-10"> v
+            <span class="text-clipped clip-letter-10">v</span>
+            <span class="text_shadows shadow-letter-10">v</span>
+          </div>
+
+          <div class="text-letter retracted letter-11"> e
+            <span class="text-clipped clip-letter-11">e</span>
+            <span class="text_shadows shadow-letter-11">e</span>
+          </div>
+
+          <div class="text-letter retracted letter-12"> r
+            <span class="text-clipped clip-letter-12">r</span>
+            <span class="text_shadows shadow-letter-12">r</span>
+          </div>
+
+          <div class="text-letter retracted letter-13"> !
+            <span class="text-clipped clip-letter-13">!</span>
+            <span class="text_shadows shadow-letter-13">!</span>
+          </div>
         </div>
 
-        <div class="text-letter retracted letter-2"> u
-          <span class="text-clipped clip-letter-2">u</span>
-          <span class="text_shadows shadow-letter-2">u</span>
+
+
+        <div id="board">
+          <table id="sudoku-table">
+            <tr class="sudoku-row" id="tr1">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="sudoku-row" id="tr2">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="sudoku-row" id="tr3">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="sudoku-row" id="tr4">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="sudoku-row" id="tr5">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="sudoku-row" id="tr6">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="sudoku-row" id="tr7">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="sudoku-row" id="tr8">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="sudoku-row" id="tr9">
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                        name="input field"
+                      />
+                    </div>
+                    <div class="back">
+                      <input type="text" maxlength="1" readonly />
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
 
-        <div class="text-letter retracted letter-3"> d
-          <span class="text-clipped clip-letter-3">d</span>
-          <span class="text_shadows shadow-letter-3">d</span>
-        </div>
 
-        <div class="text-letter retracted letter-4"> o
-          <span class="text-clipped clip-letter-4">o</span>
-          <span class="text_shadows shadow-letter-4">o</span>
-        </div>
-
-        <div class="text-letter retracted letter-5"> k
-          <span class="text-clipped clip-letter-5">k</span>
-          <span class="text_shadows shadow-letter-5">k</span>
-        </div>
-
-        <div class="text-letter retracted letter-6"> u
-          <span class="text-clipped clip-letter-6">u</span>
-          <span class="text_shadows shadow-letter-6">u</span>
-        </div>
-
-        <div class="text-letter retracted letter-7"> S
-          <span class="text-clipped clip-letter-7">S</span>
-          <span class="text_shadows shadow-letter-7">S</span>
-        </div>
-    
-        <div class="text-letter retracted letter-8"> o
-          <span class="text-clipped clip-letter-8">o</span>
-          <span class="text_shadows shadow-letter-8">o</span>
-        </div>
-    
-        <div class="text-letter retracted letter-9"> l
-          <span class="text-clipped clip-letter-9">l</span>
-          <span class="text_shadows shadow-letter-9">l</span>
-        </div>
-    
-        <div class="text-letter retracted letter-10"> v
-          <span class="text-clipped clip-letter-10">v</span>
-          <span class="text_shadows shadow-letter-10">v</span>
-        </div>
-    
-        <div class="text-letter retracted letter-11"> e
-          <span class="text-clipped clip-letter-11">e</span>
-          <span class="text_shadows shadow-letter-11">e</span>
-        </div>
-    
-        <div class="text-letter retracted letter-12"> r
-          <span class="text-clipped clip-letter-12">r</span>
-          <span class="text_shadows shadow-letter-12">r</span>
-        </div>
-    
-        <div class="text-letter retracted letter-13"> !
-          <span class="text-clipped clip-letter-13">!</span>
-          <span class="text_shadows shadow-letter-13">!</span>
-        </div>
-      </div>
-
-
-      <div id="board">
-        <table id="sudoku-table">
-          <tr class="sudoku-row" id="tr1">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
+        <div class="solve-clear-btn">
+          <div class="flip-container-btn">
+            <div class="flipper-btn">
+              <div class="front-btn">
+                <div id="solve">
+                  <button type="submit" id="solve-btn" class ="sudoku-button">Solve<br>Sodoku!</button>
                 </div>
               </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
+              <div class = "back-btn">
+                <div id="clear">
+                  <button type="reset" id="clear-btn" class ="sudoku-button">Clear<br>Sodoku!</button>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-
-          <tr class="sudoku-row" id="tr2">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-
-          <tr class="sudoku-row" id="tr3">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-
-          <tr class="sudoku-row" id="tr4">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-
-          <tr class="sudoku-row" id="tr5">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-
-          <tr class="sudoku-row" id="tr6">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-
-          <tr class="sudoku-row" id="tr7">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr class="sudoku-row" id="tr8">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <tr class="sudoku-row" id="tr9">
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="flip-container">
-                <div class="flipper">
-                  <div class="front">
-                    <input
-                      type="text"
-                      maxlength="1"
-                      oninput="this.value=this.value.replace(/[^0-9]/g,'');"
-                      name="input field"
-                    />
-                  </div>
-                  <div class="back">
-                    <input type="text" maxlength="1" readonly />
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-
-
-      <div class="solve-clear-btn">
-        <div class="flip-container-btn">
-          <div class="flipper-btn">
-            <div class="front-btn">
-              <div id="solve">
-                <button type="submit" id="solve-btn" class ="sudoku-button">Solve<br>Sodoku!</button>
-              </div>
-            </div>
-            <div class = "back-btn">
-              <div id="clear">
-                <button type="reset" id="clear-btn" class ="sudoku-button">Clear<br>Sodoku!</button>
               </div>
             </div>
           </div>
+              
         </div>
-            
-      </div>
+
+
 
     </div>
 
 
+ 
 
 
 
