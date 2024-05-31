@@ -1,15 +1,22 @@
 @import url("style_text.css");
+@font-face {
+  font-family: 'valera';
+  src: url('fonts/Varela-Regular.ttf');
+}
+
+/* TODO make input boxes smaller and just change the background image to the the bevel and remove the padding khalas to fix the white space issue jsut use positioning abosolute or something khalas*/
+
 
 body{
   margin-top: 0;
   margin-bottom: 0;
   height: 125vh;
-  background-image: url("main-background.png");
+  background-image: url("img/main-background.png");
   background-size: cover;
 }
 #game-background{
   margin-top: 1%;
-  background-image: url("game-bg-img.png");
+  background-image: url("img/game-bg-img.png");
   background-size: cover;
 
   width: 80vw;
@@ -42,7 +49,7 @@ body{
 }
 
 #board {
-  background-image: url("wood-img.jpg");
+  background-image: url("img/wood-img.jpg");
   background-size: contain;
   background-position: center;
   z-index: 1;
@@ -72,7 +79,7 @@ body{
   margin-left: 10%;
   position: relative;
   margin-bottom: 20%;
-  background-image: url("wood-btn-front.jpg");
+  background-image: url("img/wood-btn-front.jpg");
   background-size: cover;
   border-width: 10px;
   border-color: #0000005a;
@@ -93,7 +100,7 @@ body{
   position: absolute;
   box-sizing: border-box;
 
-  background-image: url("wood-btn-front.jpg");
+  background-image: url("img/wood-btn-front.jpg");
   background-size: cover;
   border-color: #00000057;
   border-style: inset;
@@ -105,7 +112,7 @@ body{
 
 
 .title-text-bg{
-  background-image: url("wood-title-background.jpg");
+  background-image: url("img/wood-title-background.jpg");
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
@@ -166,29 +173,76 @@ td {
 input[type="text"] {
   width: 100%;
   height: 100%;
-  border: none;
   box-sizing: border-box; /* Include padding and border in width */
-  padding: 15%;
   text-align: center;
-  background-clip: content-box;
-  background-size: 100%;
-  background-image: url(beveled\ wood.png);
+
+  font-family: 'valera';
+  background-size: cover;
+  background-image: url("img/wood-pieces.jpg");
+  border:rgba(0, 0, 0, 0.384) outset 5px;
   border-radius: 33%;
-  color: rgba(105, 61, 3, 0.75);
-  font-size: 1.5vw;
+  color: #b07234;
+  font-size: 2vw;
   font-weight: 550;
   outline-style: none;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.66); /* Adjust shadow color and size as needed */
 
+
+
+
+  padding: 0px;
+  align-self: center;
+  justify-self: center;
+  display: inherit;
+
+
+  text-shadow: rgba(0,0,0,0.5) -0.03vw 0, 
+  rgba(0,0,0,0.3) 0 -0.03vw, 
+  #C0C0C0 0 0.03vw, 
+  rgba(0,0,0,0.3) -0.03vw -0.06vw; 
+
+  
+
+
+  
 }
+
+
 input[type="text"]:active {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Add inset box shadow to simulate depression */
+  padding: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .flip-container {
   perspective: 500px;
   transition: 1s;
+  position: relative;
+  box-sizing: border-box;
+  outline: rgba(0, 0, 0, 0.5) 3px inset;
+  border-radius: 33%;
+
+  height: 80%;
+  width: 80%;
+
+  left: 10%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.597) inset;
 }
 
 /* flip the pane when hovered */
@@ -207,7 +261,8 @@ input[type="text"]:active {
   transition: inherit;
   transform-style: preserve-3d;
 
-  position: relative;
+
+
 }
 
 /* hide back of pane during swap */
@@ -286,12 +341,12 @@ input[type="text"]:active {
 }
 
 #solve-btn {
-  background-image: url("wood-btn-front.jpg");
+  background-image: url("img/wood-btn-front.jpg");
   background-size: cover;
 }
 
 #clear-btn {
-  background-image: url("wood-btn-back.jpg");
+  background-image: url("img/wood-btn-back.jpg");
   background-size: cover;
 }
 

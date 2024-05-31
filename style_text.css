@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'bungee';
-  src: url('Bungee-Regular.ttf');
+  src: url('fonts/Bungee-Regular.ttf');
 }
 
 :root {
@@ -32,7 +32,7 @@
 }
 
 .text-clipped{
-  background-image: url('wood-title.jpg');
+  background-image: url('img/wood-title.jpg');
   background-size: cover;
   background-clip: text;
   color: transparent;
@@ -43,7 +43,7 @@
 }
 
 .text-letter{
-  -webkit-text-stroke: 4px black;
+  -webkit-text-stroke: 5px black;
 
 }
 
@@ -71,7 +71,7 @@
 .text-clipped.pop-out{
     -webkit-animation: move 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1 forwards;
     animation: move 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1 forwards;
-    -webkit-text-stroke: 1.2px rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px #d97c50;
 }
 
 
@@ -83,6 +83,7 @@
 .text-clipped.pop-in{
     -webkit-animation: move-in 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1 forwards;
     animation: move-in 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1 forwards;
+    -webkit-text-stroke: 1px #d97c50;
 }
 
 
