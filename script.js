@@ -98,7 +98,7 @@ async function uploadSudokuArray(sudokuGridElement, grid, reveal_coordinates) {
       sudokuGridElement.rows[i].cells[j].querySelector("input").value !=
       grid[i][j]
     ) {
-      delay_timer = base_delay * Math.exp(-0.1 * k) + 10;
+      delay_timer = base_delay * Math.exp(-0.1 * k) + 35;
       flipElTextAnim(
         sudokuGridElement.rows[i].cells[j].querySelector(".flip-container"),
         grid[i][j],
@@ -293,11 +293,14 @@ function displaySudokuResults() {
       sudokuGrid,
       generateSpiralCoordinates(9, 9).reverse()
     );
-  } else {
-    console.log("unvalid grid!");
+    flipbtn();
+  } 
+  
+  else {
+    alert("unvalid grid!");
   }
   
-  flipbtn();
+
 
 
 
